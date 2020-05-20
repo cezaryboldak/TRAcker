@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "CezaryBoldak 4/21/2020 13:16",
+	"super" : "WAComponent",
+	"category" : "TestResults-WWW",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"reqSet"
+	],
+	"name" : "TestResultsSingleCombinationGraph",
+	"type" : "normal"
+}

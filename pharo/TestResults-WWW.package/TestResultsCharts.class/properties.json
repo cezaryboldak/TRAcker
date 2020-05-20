@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "TestResultsBaseComponent",
+	"category" : "TestResults-WWW",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"combinations"
+	],
+	"name" : "TestResultsCharts",
+	"type" : "normal"
+}

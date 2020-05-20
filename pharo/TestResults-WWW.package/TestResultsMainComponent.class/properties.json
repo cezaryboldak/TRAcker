@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CB 3/2/2020 20:25",
+	"super" : "WATask",
+	"category" : "TestResults-WWW",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TestResultsMainComponent",
+	"type" : "normal"
+}

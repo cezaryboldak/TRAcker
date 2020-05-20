@@ -1,0 +1,3 @@
+constants
+getPieSize
+	^ 200

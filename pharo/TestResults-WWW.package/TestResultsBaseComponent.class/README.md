@@ -1,0 +1,1 @@
+Class to be inherited by all components - it adds for example footer

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CezaryB 3/26/2020 20:44",
+	"super" : "HighchartsComponent",
+	"category" : "TestResults-WWW",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "HighchartsCustomStyle",
+	"type" : "normal"
+}

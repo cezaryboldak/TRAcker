@@ -1,0 +1,1 @@
+Main component to be loaded in Seaside container 

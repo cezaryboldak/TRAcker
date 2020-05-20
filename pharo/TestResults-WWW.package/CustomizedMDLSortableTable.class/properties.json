@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "MDLSortableTable",
+	"category" : "TestResults-WWW",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"headers",
+		"parentComponent"
+	],
+	"name" : "CustomizedMDLSortableTable",
+	"type" : "normal"
+}

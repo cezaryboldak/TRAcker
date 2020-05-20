@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "CezaryB 4/19/2019 16:44",
+	"super" : "Object",
+	"category" : "TestResults-Core",
+	"classinstvars" : [
+		"Relations"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"text",
+		"result",
+		"requirements",
+		"number",
+		"meta",
+		"answer",
+		"answerSize"
+	],
+	"name" : "Test",
+	"type" : "normal"
+}

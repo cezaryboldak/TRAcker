@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "WASession",
+	"category" : "TestResults-WWW",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"testSession",
+		"requirements",
+		"chosenRequirements",
+		"excludingRequirements"
+	],
+	"name" : "TestResultsHttpSession",
+	"type" : "normal"
+}

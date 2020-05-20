@@ -1,0 +1,1 @@
+Class representing a test session, where some tests are evaluated and take their results

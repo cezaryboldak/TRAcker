@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CezaryBoldak 4/19/2020 19:30",
+	"super" : "WAComponent",
+	"category" : "TestResults-WWW",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TestResultsBaseComponent",
+	"type" : "normal"
+}

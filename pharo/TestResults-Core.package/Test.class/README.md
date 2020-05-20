@@ -1,0 +1,1 @@
+Class representing single test, containing its text and parsed details

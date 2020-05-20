@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "CezaryB 4/19/2019 16:52",
+	"super" : "Object",
+	"category" : "TestResults-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"testResults",
+		"description",
+		"tests",
+		"requirements",
+		"combinations",
+		"heuristics"
+	],
+	"name" : "TestSession",
+	"type" : "normal"
+}

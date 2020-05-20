@@ -1,0 +1,1 @@
+Result of a test - it references a test object and its result (#OK, #FAILED).

@@ -1,0 +1,1 @@
+Class to construct a style with arbitrary properties

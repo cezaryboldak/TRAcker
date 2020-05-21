@@ -7,5 +7,6 @@ initialize
 										#Calls 'Calls\s*\(' #CallsT 'Calls\*\s*\(' 
 										#Next 'Next\s*\(' #NextT 'Next\*\s*\(' 
 										#Affects 'Affects\s*\(' #AffectsT 'Affects\*\s*\(' 
-										#Modifies 'Modifies\s*\(' #Uses 'Uses\s*\(' 								
+										#Modifies 'Modifies\s*\(' #Uses 'Uses\s*\(' 			
+										#Boolean 'boolean'  #Tupple '<.*,.*>' #Pattern '\s+pattern\s+' #With '\s+with\s+'
 								)

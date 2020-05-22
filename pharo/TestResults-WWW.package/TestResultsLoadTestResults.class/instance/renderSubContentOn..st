@@ -22,5 +22,5 @@ renderSubContentOn: html
 			 ]
 		 ].
 	reqSet := TestResultsHttpSession requirementsSets first.
-	self session requirements: reqSet. self session chosenRequirements: reqSet copy . self session excludingRequirements: Set new.
+	self session requirements: reqSet. self session chosenRequirements: reqSet copy . self session excludingRequirements: Set new. 
 

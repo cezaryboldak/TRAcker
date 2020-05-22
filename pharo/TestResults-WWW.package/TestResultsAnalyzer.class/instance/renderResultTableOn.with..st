@@ -19,7 +19,7 @@ html div:
 				selectable: true;
 				header: tableHeaders;
 				rows: [ 
-					((heuristics 
+					((self heuristics 
 						select: [ :row | | req | req := row at: #Req. (req isEmpty) or: [ (req intersection: self session chosenRequirements) isNotEmpty ] ] )
 						reject: [ :row  | | req | req := row at: #Req. (req isNotEmpty) and: [ (req intersection: self session excludingRequirements) isNotEmpty ] ] )
 						collect: [ :row | | coll | 

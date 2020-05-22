@@ -1,0 +1,3 @@
+accessing
+copyOfExcludingRequirements
+	^ excludingRequirements shallowCopy 

@@ -1,7 +1,7 @@
 initialization
 openOn: aSession
 	session := aSession.
-	tests := aSession tests.
+	tests := aSession testResults collect: [ :result | result test ].
 	testResults := aSession testResults.
 	browser := self createBrowser.
 	

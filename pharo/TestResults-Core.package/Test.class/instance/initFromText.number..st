@@ -4,6 +4,6 @@ initFromText: aText number: aNumber
 	number := aNumber asInteger .
 	requirements := Set new.
 	self class relations keysAndValuesDo: [ :symbol :regexp |
-		( regexp asRegexIgnoringCase search: text) ifTrue: [ requirements add: symbol ]
+		(regexp asRegexIgnoringCase search: text) ifTrue: [ requirements add: symbol ]
 		
 		 ]

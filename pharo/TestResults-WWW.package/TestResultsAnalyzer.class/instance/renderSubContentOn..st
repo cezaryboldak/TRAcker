@@ -4,7 +4,8 @@ renderSubContentOn: html
 	
 	testSession := self session testSession. 
 	html heading: 'Test results for ', testSession description.
-	html paragraph: 'Number of test cases: ', testSession tests size greaseString .
+	html paragraph: 'Number of all test cases: ', testSession allTestResults size greaseString .
+	html paragraph: 'Number of not excluded test cases: ', testSession testResults size greaseString .
 	self renderCombinationsOn: html.
 	html break.
 	self renderRequirementFilteringOn: html.  

@@ -11,7 +11,9 @@
 		"tests",
 		"requirements",
 		"combinations",
-		"heuristics"
+		"heuristics",
+		"excludingRequirements",
+		"filteredTestResults"
 	],
 	"name" : "TestSession",
 	"type" : "normal"

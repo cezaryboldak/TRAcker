@@ -9,7 +9,10 @@
 		"heuristics",
 		"sortKey",
 		"ascending",
-		"combinationsForCharts"
+		"combinationsForCharts",
+		"elementsToShow",
+		"position",
+		"mdlTable"
 	],
 	"name" : "TestResultsAnalyzer",
 	"type" : "normal"

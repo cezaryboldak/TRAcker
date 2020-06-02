@@ -12,8 +12,8 @@ renderResultTableOn: html with: headers
  html table: [ html tableRow: [ html tableData class: 'allRequiredPassed'; with: 'all passed and sufficiently covered'.  html tableData class: 'allPassedButMissing'; with: 'all passed but NOT sufficiently covered'.
 		html tableData class: 'mostPassed'; with: 'more passed than failed'. html tableData class: 'mostFailed'; with: 'more failed than passed'. html tableData class: 'allFailed'; with: 'all failed' ] ] ].
 
-html div:
-			(CustomizedMDLSortableTable  new
+	mdlTable := 
+			CustomizedMDLSortableTable  new
 				headers: (headers collect: [ :pair | pair key ]) ;
 				parentComponent: self; 
 				selectable: true;
@@ -27,11 +27,15 @@ html div:
 							coll addFirst: (self reqFormat: (row at: #Req)). 
 							coll asArray ] 
 				];
-				rowsPerPagePossibilities: #(10 50 100 200)).
+				rowsPerPagePossibilities: #(10 50 100 200);
+				position: (self position);
+				elementsToShow: (self elementsToShow);
+				yourself.
+html div: mdlTable.				
 jsFunction := JSFunction new arguments: { 'td' }; add: (JSStream on: 'return td.innerHTML'); yourself.
 html div:
 [html mdlAnchorButton accentColor ; raised;
    onClick:(html jQuery ajax callback:[ :val | combinationsForCharts := val ] 
 									 value: ((((html jQuery class:'combinationRow.is-selected') children: 'td:nth-child(2)') toArray map: jsFunction   )));
-	callback: [ self call: (TestResultsCharts new combinations: combinationsForCharts) ];
+	callback: [ self position: (mdlTable position). self elementsToShow: (mdlTable elementsToShow). self call: (TestResultsCharts new combinations: combinationsForCharts) ];
 	with: 'Show charts ...']

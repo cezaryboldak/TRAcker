@@ -17,7 +17,7 @@ style
 	.allFailed { background-color: #8f0000; color: #ffffff;	 }
 
 	
-	a {text-decoration: none;} 
+	a { color: blue} 
 	 a.chosen { color: red;}
 	
 	table.stats td,table.stats th { border: 1px solid black; text-align: center; }

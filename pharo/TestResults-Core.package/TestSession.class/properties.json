@@ -13,7 +13,8 @@
 		"combinations",
 		"heuristics",
 		"excludingRequirements",
-		"filteredTestResults"
+		"filteredTestResults",
+		"ignoredRequirements"
 	],
 	"name" : "TestSession",
 	"type" : "normal"

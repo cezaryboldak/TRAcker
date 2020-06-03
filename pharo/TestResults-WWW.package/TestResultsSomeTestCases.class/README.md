@@ -1,0 +1,1 @@
+Subcomponent rendering some collection of test passed as parameters 

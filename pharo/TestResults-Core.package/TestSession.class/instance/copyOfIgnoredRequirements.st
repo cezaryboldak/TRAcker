@@ -1,0 +1,3 @@
+accessing
+copyOfIgnoredRequirements
+	^ ignoredRequirements shallowCopy 

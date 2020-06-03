@@ -11,4 +11,6 @@ renderSubContentOn: html
 	self renderRequirementFilteringOn: html.  
 	html break.
 	headers := {#TCNeeded->'#TCNeeded'. #TCCount->'#TC'. #TestCoverage->'TestCoverage'. #TCFailCount->'#TCFail'. #TCPassCount->'#TCPass'. #Reliability->'Rel'. #DBR->'DBR'. #DFE->'DFE'. #DSI->'DSI'. #DFOrder->'DFOrder' }.
-	self renderResultTableOn: html with: headers
+	self renderResultTableOn: html with: headers.
+
+	self renderStatisticsOn: html.

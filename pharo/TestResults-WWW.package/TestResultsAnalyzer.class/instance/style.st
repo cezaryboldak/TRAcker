@@ -19,6 +19,9 @@ style
 	
 	a {text-decoration: none;} 
 	 a.chosen { color: red;}
+	
+	table.stats td,table.stats th { border: 1px solid black; text-align: center; }
+	table.stats { border-collapse: collapse; }
 	 
 	
 	table.blueTable {

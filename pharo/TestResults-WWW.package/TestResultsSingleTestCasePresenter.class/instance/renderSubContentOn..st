@@ -13,6 +13,18 @@ renderSubContentOn: html
 		html mdlCell size: 10; with: testResult test text.
 		html mdlCell size: 2; with: 'Status'.
 		html mdlCell size: 10; class: 'failed' if: (testResult result ~= #OK);  class: 'passed' if: (testResult result = #OK); with: testResult message.
+		html mdlCell size: 2; with: 'Requirments'.
+		html mdlCell size: 10; with: [
+			testResult test requirements do: [ :req | 
+				| reqText reqEnd |
+				html mdlChip with: [
+					reqText := req greaseString.
+					reqEnd := ((reqText last = $T) | (reqText last = $>)) ifTrue: [ reqText last asString ] ifFalse: [ '' ].
+					html mdlChipContact hexColor: '00ffff' ; with: (reqText at: 1) asString,reqEnd. 
+					html mdlChipText: req greaseString.
+				].
+			].
+		]
 	].
 	html heading level: 3; with: 'Expected result'.
 	html text: 'Legend: '.

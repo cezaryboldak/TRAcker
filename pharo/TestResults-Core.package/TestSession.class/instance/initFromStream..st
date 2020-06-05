@@ -12,7 +12,12 @@ initFromStream: aStream
 			tokens := line splitOn: Character tab.
 			test := Test fromText: (tokens at: 2) number: (tokens at: 1).
 			result := ResultOfTest new.
-			((tokens at: 5) = 'OK') ifTrue: [ result result: #OK ] ifFalse: [ result result: #FAILED ].
+			result result: #UNKNOWN.
+			((tokens at: 5) asLowercase = 'ok') ifTrue: [ result result: #OK ] .
+			((tokens at: 5) asLowercase = 'timeout') ifTrue: [ result result: #TIMEOUT ].
+			((tokens at: 5) asLowercase = 'fail') ifTrue: [ result result: #FAILED ].
+			((tokens at: 5) asLowercase = 'exception') ifTrue: [ result result: #EXCEPTION ].
+			((tokens at: 5) asLowercase = 'crash') ifTrue: [ result result: #CRASH ].
 			result message: (tokens at: 5). 
 			result answer: (tokens at: 3).
 			test answer: (tokens at: 4).

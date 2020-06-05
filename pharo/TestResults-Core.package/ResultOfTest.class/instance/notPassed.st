@@ -1,0 +1,3 @@
+testing
+notPassed 
+	^ result ~= #OK

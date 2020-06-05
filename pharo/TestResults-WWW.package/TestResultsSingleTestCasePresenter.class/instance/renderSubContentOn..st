@@ -12,7 +12,7 @@ renderSubContentOn: html
 		html mdlCell size: 2; with: 'Test input'.
 		html mdlCell size: 10; with: testResult test text.
 		html mdlCell size: 2; with: 'Status'.
-		html mdlCell size: 10; class: 'failed' if: (testResult result ~= #OK);  class: 'passed' if: (testResult result = #OK); with: testResult message.
+		html mdlCell size: 10; class: testResult label asLowercase; with: testResult message.
 		html mdlCell size: 2; with: 'Requirments'.
 		html mdlCell size: 10; with: [
 			testResult test requirements do: [ :req | 

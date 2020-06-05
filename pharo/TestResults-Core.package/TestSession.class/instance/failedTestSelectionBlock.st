@@ -1,3 +1,3 @@
 utility
 failedTestSelectionBlock
-	^ [ :res | res result = #FAILED   ]
+	^ [ :res | res result ~= #OK ]

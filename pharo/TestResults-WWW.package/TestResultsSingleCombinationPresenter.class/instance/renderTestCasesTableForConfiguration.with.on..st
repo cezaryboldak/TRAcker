@@ -22,7 +22,7 @@ renderTestCasesTableForConfiguration: reqSet with: testResults on: html
 				testResults do: [ :testResult | | anId exact | 
 				 	anId := html nextId. 
 					exact := testResult test requirements = reqSet.
-					html tableRow class: 'exact' if: exact; class: 'plus' if: exact not; id: anId; class: testResult label asLowercase; 
+					html tableRow class: 'exact' if: exact; class: 'plus' if: exact not; class: 'plus-hidden' if: exact not; id: anId; class: testResult label asLowercase; 
 						onDoubleClick: 'document.location=$("#',anId asString,'")[0].href' ; 
 					with: [ 
 						html anchor callback: [ self call: (TestResultsSingleTestCasePresenter new testCaseNumber: testResult test number) ]; style: 'display:none'; id: anId.

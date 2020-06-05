@@ -16,6 +16,5 @@ style
 	.plus-hidden { display: none; }
 	.exact-hidden { display: none; }
 	
-	.plus {  display: none; }
 	.help { color: gray; }
 	'

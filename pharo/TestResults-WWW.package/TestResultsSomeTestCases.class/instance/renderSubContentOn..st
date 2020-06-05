@@ -1,8 +1,16 @@
 rendering
 renderSubContentOn: html 
+	| id classesToDesc |
+	classesToDesc := OrderedDictionary newFrom: { 'ok'->'test case passed (OK)'. 'failed'->'test case failed'. 'exception'->'exception'. 'timeout'->'timeout'.'crash'->'crash'.'unknown'->'result unknown' } .
 	html mdlGrid: [ html mdlCell size: 12; with: [ 
-	html paragraph: 'Double click to see answers'.
-	html table: [ html tableRow: [ html tableData class: 'failed'; with: 'test case failed'.  html tableData class: 'ok'; with: 'test case passed (OK)'.html tableData class: 'exception'; with: 'exception'.html tableData class: 'timeout'; with: 'timeout'. html tableData class: 'crash'; with: 'crash'. html tableData class: 'unknown'; with: 'result unknown' ] ] .
+	html paragraph: 'Click to hide/show:'.
+	html table: [ html tableRow: [ 
+			classesToDesc keysAndValuesDo: [ :cl :desc | 
+				id := html nextId.
+				html tableData id: id; class: cl; onClick: (html jQuery script: [ :s | s << ((s jQuery id: id asString) hasClass: cl) then: ((s jQuery: 'tr.',cl) addClass: cl,'-hidden') else:  ((s jQuery: 'tr.',cl) removeClass: cl,'-hidden'). s << ((s jQuery id: id asString) hasClass: cl) then: ((s jQuery id: id asString) removeClass: cl) else:  ((s jQuery id: id asString) addClass: cl)  ]); with: desc.  
+			]
+ 	] ] .
+	html paragraph: 'Double click to see answers:'.
 	html mdlTable
 		shadow: 2; style: 'width: 100%;';
 		with: [ 

@@ -1,14 +1,16 @@
 rendering
 renderStatisticsOn: html 
-   | requirements stats quantityBlocks relations |
+   | requirements stats quantityBlocks headers |
 	stats := OrderedCollection new.
-	relations := TestResultsHttpSession requirementsByCategory first at: #Relations.
 	quantityBlocks := { [ :val | val = 2 ]. [ :val | val = 3 ]. [ :val | val > 3 ]. [ :val | val > 1 ]  }.
    requirements := {  #Follows. #FollowsT. #Parent. #ParentT. #Calls. #CallsT. #Modifies. #ModifiesT. #Uses. #Next. #NextT. #Pattern. #With. #<>. #Underscore. #Boolean. #Affects. #AffectsT  }.
-	html heading level3; with: 'Statistics'.
+	html heading level3; with: [ html text: 'Statistics'; small: ' %passed' ].
+	
+	headers := OrderedCollection new.
+	requirements do: [ :req | headers add: req asString ]. 
+	headers add: '2 relations'. headers add: '3 relations'. headers add: '>3 relations'. headers add: 'multi relations'. headers add: 'Total'.
 	html div: [ html table class: 'stats';with:[ 
-		html tableRow: [ requirements do: [ :req | html tableHeading: '% passed ', req asString ]. html tableHeading: '% passed 2 rel'. 
-			html tableHeading: '% passed 3 rel'. html tableHeading: '% passed >3 rel'. html tableHeading: '% passed multi rel'. html tableHeading: '% total passed'. ].
+		html tableRow: [ headers do: [ :desc | html tableHeading: desc ] ] .
 		html tableRow: [ | testCases passed |
 			"concrete requirements"
 			requirements do: [ :req | 
@@ -30,13 +32,14 @@ renderStatisticsOn: html
 		html tableRow: [ 
 			stats do: [ :pair | html tableData: ( (pair second = 0) ifTrue: [ '-' ] ifFalse: [ self numberFormat: (pair first / pair second * 100) ] ) ] ]. 
 		html tableRow: [ 
-			stats do: [ :pair | 
+			stats withIndexDo: [ :pair :index | 
 				html tableData: [
 					(pair second = 0) 
 						ifTrue: [ '-' ] 
 						ifFalse: [  
-							html anchor	callback: [ self call: ( TestResultsSomeTestCases new testResults: (pair third);yourself ) ];
-							         	   with: ( (pair second = 0) ifTrue: [ '-' ] ifFalse: [ pair first greaseString,'/',pair second greaseString ]) 
+							html text: pair first greaseString,'/'.
+							html anchor	callback: [ self call: ( TestResultsSomeTestCases new testResults: (pair third); title: (headers at: index); yourself ) ];
+							         	   with: pair second greaseString  
 						] 
 				] 
 			]. 

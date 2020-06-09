@@ -4,7 +4,9 @@ renderSubContentOn: html
 	
 	testSession := self session testSession. 
 	html heading: 'Test results for ', testSession description.
-	html paragraph: 'Number of all test cases: ', testSession allTestResults size greaseString .
+	html paragraph with: [ 
+		html text: 'Number of all test cases: ', testSession allTestResults size greaseString, ' '. 
+		html anchor  callback: [ self call: ( TestResultsSomeTestCases new testResults: (testSession testResults); title: 'Total'; yourself ) ]; with: 'See all of them ...' ].
 	html paragraph: 'Number of not excluded test cases: ', testSession testResults size greaseString .
 	self renderCombinationsOn: html.
 	html break.

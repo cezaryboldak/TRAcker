@@ -6,7 +6,7 @@ renderContentOn: html
 				html mdlLogo: 'TRAcker 2'
 			].
 			html mdlFooterBottomSection: [ 
-				html text: 'Copyright 2019,2020 '.
+				html text: 'Copyright 2019-2022 '.
 				html anchor url: 'mailto:c.boldak@pb.edu.pl'; with: 'Cezary Boldak'.
 				html text: ', '.
 				html anchor url: 'mailto:s.jarzabek@pb.edu.pl'; with: 'Stan Jarzabek'.

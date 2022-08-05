@@ -6,7 +6,7 @@ markedCombinationsUpTo: maxSize
 	res := OrderedDictionary new.
 	1 to: maxSize do: [ :size | 
 		all := Array streamContents: [ :stream |
-			self session requirements asOrderedCollection  combinations: size atATimeDo: [ :comb | stream nextPut: comb copy ] 
+			self session testSession requirements keys asOrderedCollection  combinations: size atATimeDo: [ :comb | stream nextPut: comb copy ] 
 		].
 		all sort: [ :c1 :c2 |  c1 greaseString  < c2 greaseString ].	
 		"res at: size put: (OrderedDictionary newFromKeys: all andValues: (all collect: [ :comb | self session testSession combinations includes: comb asSet ])).	"

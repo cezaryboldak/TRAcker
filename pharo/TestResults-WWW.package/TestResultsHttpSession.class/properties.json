@@ -7,7 +7,6 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"testSession",
-		"requirements",
 		"chosenRequirements",
 		"excludingRequirements"
 	],

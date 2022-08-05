@@ -2,8 +2,11 @@ rendering
 renderRequirementsOn: html title: aTitle collection: reqSet color: aColor addBlock: addReqBlock removeBlock: removeReqBlock
 	"generic method for rendering the requirement filtering  form; 
 	two last params are 1-param blocks executed when a requirement is to be added / removed (this requirement is then the parameterof this block)"
-	| reqsByCategory |
-	reqsByCategory := TestResultsHttpSession requirementsByCategory first.
+	| reqsByCategory  |
+	" prepare dictionary with categories mapped to requirements "
+	reqsByCategory := OrderedDictionary new. 
+	self session testSession requirements keysAndValuesDo: [ :req :catRegexp |  (reqsByCategory at: (catRegexp first) ifAbsentPut: [Set new]) add: req].
+
 	html paragraph: [ 
 		html div class: 'toggle',aColor; with: [ 
 			html heading level6; with: [ html strong: aTitle. 	html space. 

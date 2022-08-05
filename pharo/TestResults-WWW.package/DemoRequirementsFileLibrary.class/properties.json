@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CezaryBoldak 8/5/2022 14:54",
+	"super" : "WAFileLibrary",
+	"category" : "TestResults-WWW",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "DemoRequirementsFileLibrary",
+	"type" : "normal"
+}

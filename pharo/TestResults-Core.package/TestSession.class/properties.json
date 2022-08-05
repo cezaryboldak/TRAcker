@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "CezaryB 4/19/2019 16:52",
+	"commentStamp" : "CezaryBoldak 8/4/2022 18:31",
 	"super" : "Object",
 	"category" : "TestResults-Core",
 	"classinstvars" : [ ],
@@ -14,7 +14,8 @@
 		"heuristics",
 		"excludingRequirements",
 		"filteredTestResults",
-		"ignoredRequirements"
+		"ignoredRequirements",
+		"includingRequirements"
 	],
 	"name" : "TestSession",
 	"type" : "normal"

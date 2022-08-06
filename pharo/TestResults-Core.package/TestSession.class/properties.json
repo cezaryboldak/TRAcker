@@ -15,7 +15,8 @@
 		"excludingRequirements",
 		"filteredTestResults",
 		"ignoredRequirements",
-		"includingRequirements"
+		"includingRequirements",
+		"TCNeededTable"
 	],
 	"name" : "TestSession",
 	"type" : "normal"

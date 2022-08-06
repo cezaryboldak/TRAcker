@@ -20,7 +20,11 @@ renderSubContentOn: html
 			html fileUpload callback: [ :file | testSession requirementsFromFile: file.	self session chosenRequirements: (testSession requirements keys asSet) copy  ].
 			html break.
 
-			html text: 'Test results file (obligatory):'.
+			html text: 'TCNeeded values (optional):'.
+			html fileUpload callback: [ :file | testSession TCNeededFromFile: file  ].
+			html break.
+
+			html strong: 'Test results file (obligatory):'.
 			html fileUpload callback: [ :file | testSession initFromWAFile: file.   ]; required.
 			html break.
 			
@@ -39,6 +43,11 @@ renderSubContentOn: html
 				html anchor 
 					url: (DemoRequirementsFileLibrary urlOf: #demoRequirementsTxt);
 					with: 'demoRequirements.txt'.
+				html break.
+				html span: ' Demo TCNeededValues: '.
+				html anchor 
+					url: (DemoRequirementsFileLibrary urlOf: #demoTCNeededTxt);
+					with: 'demoTCNeeded.txt'.
 				html break.
 				html span: ' Demo tests: '.
 				html anchor 

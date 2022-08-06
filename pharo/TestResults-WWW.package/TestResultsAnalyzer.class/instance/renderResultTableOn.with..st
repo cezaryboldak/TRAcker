@@ -9,8 +9,9 @@ renderResultTableOn: html with: headers
 	
  "html paragraph: 'Double click to see more: '."
  html div: [ 	
- html table: [ html tableRow: [ html tableData class: 'allRequiredPassed'; with: 'all passed and sufficiently covered'.  html tableData class: 'allPassedButMissing'; with: 'all passed but NOT sufficiently covered'.
-		html tableData class: 'mostPassed'; with: 'more passed than failed'. html tableData class: 'mostFailed'; with: 'more failed than passed'. html tableData class: 'allFailed'; with: 'all failed' ] ] ].
+" html table: [ html tableRow: [ html tableData class: 'allRequiredPassed'; with: 'all passed and sufficiently covered'.  html tableData class: 'allPassedButMissing'; with: 'all passed but NOT sufficiently covered'.
+		html tableData class: 'mostPassed'; with: 'more passed than failed'. html tableData class: 'mostFailed'; with: 'more failed than passed'. html tableData class: 'allFailed'; with: 'all failed' ] ] ]."
+html table: [ html tableRow: [ html tableData class: 'allRequiredPassed'; with: 'all passed'.  html tableData class: 'mostPassed'; with: 'more passed than failed'. html tableData class: 'mostFailed'; with: 'more failed than passed'. html tableData class: 'allFailed'; with: 'all failed' ] ] ].
 
 	mdlTable := 
 			CustomizedMDLSortableTable  new

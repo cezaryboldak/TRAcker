@@ -9,8 +9,9 @@ classFor: row
 	(tcfailedcount = 0) 
 		ifTrue: [ 
 			(tccount = 0) ifTrue: [ ^ '' ].
-			(tccount >= tcneeded) ifTrue: [ ^ 'allRequiredPassed' ].
-			^ 'allPassedButMissing'.
+			^ 'allRequiredPassed'.
+			"(tccount >= tcneeded) ifTrue: [ ^ 'allRequiredPassed' ].
+			^ 'allPassedButMissing'."
 			 ].
 	
 	(tcpassedcount = 0) ifTrue: [ ^ 'allFailed' ].

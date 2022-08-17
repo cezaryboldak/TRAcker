@@ -2,16 +2,16 @@ files
 demoTCNeededTxt
    | crlf |
    crlf := Character cr asString, Character lf asString.
-	^ 'r1	10',crlf,
-'r2	20',crlf,
-'r3	20	',crlf,
-'r4	30	',crlf,
-'r1,r2	30	',crlf,
-'r1,r3	30	',crlf,
-'r1,r4	40	',crlf,
-'r2,r3	50	',crlf,
-'r2,r4	50	',crlf,
-'r3,r4	60	',crlf,
-'r1,r2,r3	100	',crlf,
-'r1,r2,r4	120',crlf,
-'r1,r3,r4	150',crlf
+	^ 'Parent	10',crlf,
+'Follows	20',crlf,
+'Uses	20	',crlf,
+'Affects	30	',crlf,
+'Parent,Follows	30	',crlf,
+'Parent,Uses	30	',crlf,
+'Parent,Affects	40	',crlf,
+'Follows,Uses	50	',crlf,
+'Follows,Affects	50	',crlf,
+'Uses,Affects	60	',crlf,
+'Parent,Follows,Uses	100	',crlf,
+'Parent,Follows,Affects	120',crlf,
+'Parent,Uses,Affects	150',crlf

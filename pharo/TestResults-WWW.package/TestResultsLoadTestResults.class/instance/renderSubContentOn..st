@@ -10,8 +10,8 @@ renderSubContentOn: html
 	self session chosenRequirements: (testSession requirements keys asSet ) copy . 
 	self session excludingRequirements: Set new.
 
-	html div: [ 
-		html heading: 'Load test results'.
+	html mdlCell size: 12; with: [ 
+		html heading: 'TRAcker - Test Results Analyzer'.
 		self renderInfoOn: html.
 		html paragraph: 'That should be copy-pasted from PipeTester and put in a text file '.
 		html form multipart  with: [ 

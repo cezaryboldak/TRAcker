@@ -2,7 +2,7 @@ rendering
 renderTestCasesTableForConfiguration: reqSet with: testResults on: html 
 	| id classesToDesc |
 	classesToDesc := OrderedDictionary newFrom: { 'ok'->'test case passed (OK)'. 'failed'->'test case failed'. 'exception'->'exception'. 'timeout'->'timeout'.'crash'->'crash'.'unknown'->'result unknown' } .
-	html paragraph: 'Click to hide/show:'.
+	html span: 'Click to hide/show:'.
 	html table: [ html tableRow: [ 
 			classesToDesc keysAndValuesDo: [ :cl :desc | 
 				id := html nextId.
@@ -10,8 +10,7 @@ renderTestCasesTableForConfiguration: reqSet with: testResults on: html
 			]
  	] ] .
 
-	html mdlGrid: [ html mdlCell size: 12; with: [ 
-	html paragraph: 'Double click to see answers:'.
+	html span: 'Double click to see answers:'.
 	html mdlTable
 		shadow: 2; style: 'width: 100%;';
 		with: [ 
@@ -34,4 +33,4 @@ renderTestCasesTableForConfiguration: reqSet with: testResults on: html
 				]
 			]
 		].
- ] ]. 
+  

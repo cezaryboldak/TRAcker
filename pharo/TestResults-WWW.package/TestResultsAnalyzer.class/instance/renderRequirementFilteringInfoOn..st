@@ -6,7 +6,7 @@ renderRequirementFilteringInfoOn: html
 			html mdlExpansionPanelHeader
 				toggleExpansionOnClick;
 				with: [ html mdlExpansionPanelHeaderTitle with: [
-						html heading level5; with: 'Requirement filtering'. 
+						html heading level4; with: 'Requirement filtering'. 
 					].
 					html mdlIcon with: 'info'.
 					html mdlExpansionPanelHeaderIcon ].

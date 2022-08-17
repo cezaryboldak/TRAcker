@@ -6,6 +6,7 @@ renderCombinationsOn: html
 	marked := self markedCombinationsUpTo: 4.
 	titles := #('single requirements' 'requirement pairs' 'requirement triples' 'requirement quadruples' 'requirement n-tuples').
 	marked keysAndValuesDo: [ :size :combToTest |
+		html mdlCell size: 12; with: [ 
 		html mdlExpansionPanel
 			shadow: 2;
 			fold;
@@ -38,3 +39,4 @@ renderCombinationsOn: html
 				]
 			]
 		]
+	]

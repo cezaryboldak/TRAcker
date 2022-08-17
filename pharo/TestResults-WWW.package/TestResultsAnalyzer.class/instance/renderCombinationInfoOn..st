@@ -6,7 +6,7 @@ renderCombinationInfoOn: html
 			html mdlExpansionPanelHeader
 				toggleExpansionOnClick;
 				with: [ html mdlExpansionPanelHeaderTitle with: [
-						html heading level5; with: 'Coverage of requirement configurations by test cases'. 
+						html heading level4; with: 'Coverage of requirement configurations by test cases'. 
 					].
 					html mdlIcon with: 'info'.
 					html mdlExpansionPanelHeaderIcon ].

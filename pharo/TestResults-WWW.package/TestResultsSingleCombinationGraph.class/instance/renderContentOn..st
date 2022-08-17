@@ -1,6 +1,6 @@
 rendering
 renderContentOn: html 
-	| chart data series linkId clickedReq reqId myLabel |
+	| chart series linkId clickedReq reqId myLabel |
 	
 	myLabel := reqSet asRequirements .
 	
@@ -9,10 +9,11 @@ renderContentOn: html
 	chart title text: '.'.
 	chart chart styledMode: false.
 	
-	data := self produceReqConfigurationData.
-	
 	series := chart addSeriesOf: HighchartsSeriesSankey.
-	series data: data.
+
+	self setSeries: series.
+
+
 	series dataLabels style fontSize: '16px' .
 	series nodes add: (HighchartsSeriesSankeyNodes new colorIndex: 200; id: myLabel; name: myLabel; color: (self getRelColorString: (self session testSession Reliability: reqSet)); yourself).
 			

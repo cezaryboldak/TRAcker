@@ -1,6 +1,8 @@
 rendering
 renderContentOn: html 
-		self renderSubContentOn: html.
+		html mdlGrid: [  
+			self renderSubContentOn: html. 
+		].
 		html mdlFooter: [  
 			html mdlFooterMiddleSection: [ 
 				html mdlLogo: 'TRAcker 2'

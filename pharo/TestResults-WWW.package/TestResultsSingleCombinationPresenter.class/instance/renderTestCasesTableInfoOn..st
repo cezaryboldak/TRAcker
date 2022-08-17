@@ -6,7 +6,7 @@ renderTestCasesTableInfoOn: html
 			html mdlExpansionPanelHeader
 				toggleExpansionOnClick;
 				with: [ html mdlExpansionPanelHeaderTitle with: [
-						html heading level5; with: 'Test cases'. 
+						html heading level3; with: 'Test cases'. 
 					].
 					html mdlIcon with: 'info'.
 					html mdlExpansionPanelHeaderIcon ].

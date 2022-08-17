@@ -15,7 +15,7 @@ renderModeTabsForConfiguration: reqSet with: testResults on: html
 						html mdlTab	onClick: (html jQuery script: [ :s | s << (s jQuery: 'tr.exact') addClass:'exact-hidden'. s << (s jQuery: 'tr.plus') removeClass: 'plus-hidden' ]); isActiveIf: mode='PLUS'; url: '#plus-panel'; with: 'PLUS'.
 					
 				].
-			html mdlTabsPanel id: 'netto-panel'; isActiveIf: mode='NETTO'; with: [ html heading level:3; with: 'Test cases tagged by exactly ',  (row at: 1), ' - ', exactCount asString, ' test(s)' ].
-			html mdlTabsPanel id: 'brutto-panel'; isActiveIf: mode='BRUTTO'; with:  [ html heading level:3; with: 'Test cases tagged by ',  (row at: 1), ' and possibly yet other requirements - ', (exactCount+plusCount) asString, ' test(s)' ].
-			html mdlTabsPanel id: 'plus-panel'; isActiveIf: mode='PLUS'; with: [  html heading level:3; with: 'Test cases tagged by ',  (row at: 1), ' and at least one yet other requirement - ', plusCount  asString, ' test(s)' ].
+			html mdlTabsPanel id: 'netto-panel'; isActiveIf: mode='NETTO'; with: [ html heading level:5; style: 'text-align:center'; with: 'Test cases tagged by exactly ',  (row at: 1), ' - ', exactCount asString, ' test(s)' ].
+			html mdlTabsPanel id: 'brutto-panel'; isActiveIf: mode='BRUTTO'; with:  [ html heading level:5; style: 'text-align:center'; with: 'Test cases tagged by ',  (row at: 1), ' and possibly yet other requirements - ', (exactCount+plusCount) asString, ' test(s)' ].
+			html mdlTabsPanel id: 'plus-panel'; isActiveIf: mode='PLUS'; with: [  html heading level:5; style: 'text-align:center'; with: 'Test cases tagged by ',  (row at: 1), ' and at least one yet other requirement - ', plusCount  asString, ' test(s)' ].
 	].

@@ -6,7 +6,7 @@ renderGraphComponentInfoOn: html
 			html mdlExpansionPanelHeader
 				toggleExpansionOnClick;
 				with: [ html mdlExpansionPanelHeaderTitle with: [
-						html heading level5; with: 'Baseline and R+ configurations'. 
+						html heading level3; with: 'Baseline and R+ configurations'. 
 					].
 					html mdlIcon with: 'info'.
 					html mdlExpansionPanelHeaderIcon ].

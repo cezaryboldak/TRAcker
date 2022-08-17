@@ -6,7 +6,7 @@ renderResultTableInfoOn: html
 			html mdlExpansionPanelHeader
 				toggleExpansionOnClick;
 				with: [ html mdlExpansionPanelHeaderTitle with: [
-						html heading level5; with: 'Metrics'. 
+						html heading level4; with: 'Metrics'. 
 					].
 					html mdlIcon with: 'info'.
 					html mdlExpansionPanelHeaderIcon ].

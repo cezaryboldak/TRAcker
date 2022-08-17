@@ -6,7 +6,7 @@ renderInfoOn: html
 		with: [ 
 			html mdlExpansionPanelHeader
 				toggleExpansionOnClick;
-				with: [ html mdlExpansionPanelHeaderTitle: ''.
+				with: [ html mdlExpansionPanelHeaderTitle with:[ html heading level3; with: 'Set up TRAcker' ].
 					html mdlIcon with: 'info'.
 					html mdlExpansionPanelHeaderIcon ].
 			html

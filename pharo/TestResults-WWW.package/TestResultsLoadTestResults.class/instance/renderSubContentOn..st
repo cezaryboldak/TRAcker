@@ -18,35 +18,36 @@ renderSubContentOn: html
 		html form multipart  with: [ 
 			" I hope this upload callback will be evaluated as first "
 			html paragraph: [ 
-				html strong: 'Requirement definition: '.
-				html fileUpload callback: [ :file | testSession requirementsFromFile: file.	self session chosenRequirements: (testSession requirements keys asSet) copy  ].
+				html strong: 'Requirement definition:  '.
+				html fileUpload callback: [ :file | testSession requirementsFromFile: file.	self session chosenRequirements: (testSession requirements keys asSet) copy  ]; required.
 				html mdlAnchorButton	url: (DemoRequirementsFileLibrary urlOf: #demoRequirementsTxt);	with: 'Sample format'.
-			].
-			html paragraph: [ 
-				html strong: 'TCNeeded values: '.
+				html break.
+				html strong: 'TCNeeded values:  '.
 				html fileUpload callback: [ :file | testSession TCNeededFromFile: file  ].
 				html mdlAnchorButton url: (DemoRequirementsFileLibrary urlOf: #demoTCNeededTxt); with: 'Sample format'.
-			].
-			html paragraph: [ 
-				html strong: 'Test results file:'.
+				html break.
+				html strong: 'Test results file:  '.
 				html fileUpload callback: [ :file | testSession initFromWAFile: file.   ]; required.
 				html mdlAnchorButton	url: (DemoRequirementsFileLibrary urlOf: #demoTestsTxt); with: 'Sample format'.
 			].
 			
 			html mdlButton raised; accentColor; rippleEffect; callback: [ self answer: #OK ]; value: 'Upload'.
 		].
+		html heading level4; with: '2. Upload test results for SPA project:'.
 		html form multipart  with: [ 
 			html paragraph: [ 
-				html heading level: 5; with: 'You can use demo files:'.
-				html span: ' Demo requirements: '.
+				html strong: 'TCNeeded values (optional):  '.
+				html fileUpload callback: [ :file | testSession TCNeededFromFile: file  ].
 				html break.
-				html span: ' Demo TCNeededValues: '.
-				
-				html break.
-				html span: ' Demo tests: '.
-					
-				html break.
-				html span: ' OR '.
+				html strong: 'SPA Test results file:  '.
+				html fileUpload callback: [ :file | testSession initFromWAFile: file.   ]; required.
+			].
+			
+			html mdlButton raised; accentColor; rippleEffect; callback: [ self answer: #OK ]; value: 'Upload SPA tests'.
+		].
+		html heading level4; with: '3. Upload demo SPA files:'.
+		html form multipart  with: [ 
+			html paragraph: [ 
 				html mdlButton raised; accentColor; rippleEffect; callback: [ self uploadDemoSession: testSession . self answer: #OK ]; with: 'Upload Demo Files'.
 			].
 		].

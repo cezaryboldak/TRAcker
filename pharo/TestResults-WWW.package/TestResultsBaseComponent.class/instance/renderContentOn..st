@@ -17,6 +17,6 @@ renderContentOn: html
 				html text: ' '."
 				html text: '...'.
 				html break.
-				html anchor url: 'https://pb.edu.pl'; with: 'Bialystok University of Technology'
+				"html anchor url: 'https://pb.edu.pl'; with: 'Bialystok University of Technology'"
 			]
 		].

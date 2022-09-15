@@ -36,7 +36,7 @@ renderSingleChartsOn: html withSeries: data mode: mode
 		annotation labels add: label.		
 	].
 	jsStream nextPutAll: '};'.
-	chart chart events: (HighchartsChartEvents new load: (JSStream on: 'function() {  $(".link',mode,'").find("text").each(function(i,v) {var t=$(v).text(); if(t!=".") {$(v).text("{"+t+"}");} else {$(v).text("{}");}} ); $("div.mdl-tabs__panel:has(h2:contains(',mode,')) g.highcharts-pie-series").dblclick(function() {',jsStream contents,'var cl=$(this).attr("class"), key="highcharts-series-", pos=cl.indexOf(key), req=id2Req[parseInt(cl.substring(pos+key.length,pos+key.length+2))];  $("#',reqId,'").text(req); $("#',linkId,'").click();document.location=$("#',linkId,'")[0].href;})}')).
+	chart chart events: (HighchartsChartEvents new load: (JSStream on: 'function() {   $(".link',mode,'").find("text").each(function(i,v) {var t=$(v).text(); if(t!=".") {$(v).text("{"+t+"}");} else {$(v).text("{}");}} ); $("div.mdl-tabs__panel.is-active g.highcharts-pie-series").dblclick(function() {',jsStream contents,'var cl=$(this).attr("class"), key="highcharts-series-", pos=cl.indexOf(key), req=id2Req[parseInt(cl.substring(pos+key.length,pos+key.length+2))];  $("#',reqId,'").text(req); $("#',linkId,'").click();document.location=$("#',linkId,'")[0].href;})}')).
 
 	height := rowNumber * (self class getPieSize + 100).
 	width := (chartsPerRow min: data size)  * (self class getPieSize + 100).
